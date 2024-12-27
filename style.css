@@ -1,0 +1,88 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tiktok {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tiktok h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.form-control {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+}
+
+.search-btn {
+    border-radius: 0;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+.resultsContainer {
+    margin-top: 20px;
+    display: none;
+}
+
+.card {
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-info {
+    margin-top: 20px;
+}
+
+.download-btn {
+    margin-top: 20px;
+}
+
+.download-btn a {
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.download-btn a:hover {
+    background-color: #0056b3;
+}
+
+.errorMessage {
+    color: red;
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 15px;
+    }
+}
