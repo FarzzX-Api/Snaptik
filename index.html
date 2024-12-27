@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+ <meta name="description" content="Tiktok Downloader">
+ <meta property="og:description" content="https://api.dannteam.com">
+ <meta name="copyright" content="Tiktok Downloader - Faris">
+ <meta name="author" content="Tiktok Downloader - DannTeam API">
+ <link href="https://telegra.ph/file/b849a052a00dbbfcd53fd.jpg" rel="icon"> 
+ <link href="https://telegra.ph/file/b849a052a00dbbfcd53fd.jpg" rel="apple-touch-icon"> 
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+ 
+ <title>Tiktok Downloader - Faris</title>
+</head>
+<body>
+ <div class="container">
+ <div class="tiktok">
+     <div class="card">
+ <h1>Snaptik</h1>
+ </div>
+ <div class="input-group">
+ <span class="input-group-text text-body"><i class="fas fa-download" aria-hidden="true"></i></span>
+ <input type="text" id="url" class="form-control" placeholder="Masukkan URL..">
+ </div>
+ <button id="searchButton" class="btn btn-primary search-btn">Download</button>
+
+ <div class="resultsContainer card">
+ <div class="card-body">
+ <h3 id="videoTitle"></h3>
+ <p id="videoAuthor"></p>
+ <p id="videoDescription"></p>
+ <video controls id="videoPlayer" style="width: 100%; display: none;"></video>
+ <div class="download-btn">
+ <a href="#" download id="downloadButton" class="btn btn-primary">Download (MP4)</a>
+ <a href="html.html" download id="downloadAudioButton" class="btn btn-primary">Download (MP3)</a>
+ </div>
+ </div>
+ </div>
+ <p class="errorMessage">Masukkan URL!</p>
+ </div>
+ <script src="script.js"></script>
+</body>
+</html>
