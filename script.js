@@ -1,4 +1,3 @@
-
  document.getElementById('searchButton').addEventListener('click', function() {
  const url = document.getElementById('url').value;
  const resultsContainer = document.querySelector('.resultsContainer');
@@ -10,20 +9,20 @@
  return;
  } else {
  errorMessage.style.display = 'none';
- fetch(`https://website-api-pied.vercel.app/api/download/tiktok?url=${url}&key=farisofc`)
+ fetch(`https://website-restapii.vercel.app/tiktokdll?url=${url}&key=farisofc`)
  .then(response => response.json())
- .then(data => {
- document.getElementById('videoTitle').textContent = `Title: ${data.result.title}`;
- document.getElementById('videoAuthor').textContent = `Author: ${data.result.music.author}`;
- document.getElementById('videoDescription').textContent = `Judul: ${data.result.title}`;
+ .then(tik => {
+ document.getElementById('videoTitle').textContent = `Title: ${tik.result.data.title}`;
+ document.getElementById('videoAuthor').textContent = `Author: ${tik.result.data.author.nickname}`;
+ document.getElementById('videoDescription').textContent = `Judul: ${tik.result.data.title}`;
  const videoPlayer = document.getElementById('videoPlayer');
- videoPlayer.src = data.result.video.noWatermark;
+ videoPlayer.src = tik.result.data.play;
  videoPlayer.style.display = 'block';
  videoPlayer.load();
  videoPlayer.play();
 
- document.getElementById('downloadButton').href = data.result.video.noWatermark;
- document.getElementById('downloadAudioButton').href = data.result.music.play_url;
+ document.getElementById('downloadButton').href = tik.result.data.play;
+ document.getElementById('downloadAudioButton').href = tik.result.data.music_info.play;
 
  resultsContainer.style.display = 'block';
  })
