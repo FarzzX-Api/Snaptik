@@ -10,20 +10,20 @@
  return;
  } else {
  errorMessage.style.display = 'none';
- fetch(`https://website-api-pied.vercel.app/api/download/tiktok?url=${url}&key=farisofc`)
+ fetch(`https://website-restapii.vercel.app/tiktokdll?url=${url}&key=farisofc`)
  .then(response => response.json())
  .then(data => {
  document.getElementById('videoTitle').textContent = `Title: ${data.result.title}`;
  document.getElementById('videoAuthor').textContent = `Author: ${data.result.music.author}`;
  document.getElementById('videoDescription').textContent = `Judul: ${data.result.title}`;
  const videoPlayer = document.getElementById('videoPlayer');
- videoPlayer.src = data.result.video.noWatermark;
+ videoPlayer.src = data.result.play;
  videoPlayer.style.display = 'block';
  videoPlayer.load();
  videoPlayer.play();
 
- document.getElementById('downloadButton').href = data.result.video.noWatermark;
- document.getElementById('downloadAudioButton').href = data.result.music.play_url;
+ document.getElementById('downloadButton').href = data.result.play;
+ document.getElementById('downloadAudioButton').href = data.result.music.play;
 
  resultsContainer.style.display = 'block';
  })
